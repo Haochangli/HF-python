@@ -1,4 +1,6 @@
 from datetime import datetime
+import time
+import random
 
 odds = [1,3,5,7,9,
         11,13,15,17,19,
@@ -7,9 +9,16 @@ odds = [1,3,5,7,9,
         41,43,45,47,49,
         51,53,55,57,59]
 
-right_this_minute = datetime.today().minute
 
-if right_this_minute in odds :
-    print ("This minute seems a litttle odd.")
-else:
-    print ("Not an odd minute.")
+
+for count in range(5):   
+
+    right_this_minute = datetime.today().minute
+
+    if right_this_minute in odds :
+        print ("This minute seems a litttle odd.")
+    else:
+        print ("Not an odd minute.")
+    time.sleep(random.randint(1,60))
+    print (random.randint(1,60))
+
